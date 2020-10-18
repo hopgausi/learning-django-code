@@ -1,0 +1,19 @@
+<div class="post-options">
+  <div class="row">
+    <div class="col-6">
+      <ul class="post-tags">
+        <li><i class="fa fa-tags fa-1x"></i></li>
+        {% for tag in object.post_tags.all %}
+          <li><a href="{% url 'blog:tag_blog_list' tag|lower %}">{{ tag }}</a> |</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-6">
+      <ul class="post-share">
+        <li><i class="fa fa-share-alt fa-1x"></i></li>
+        <li><a href="#"><i class="fab fa-facebook fa-1x"></i></a></li>
+        <li><a href="#"> <i class="fab fa-twitter fa-1x"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
